@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My King 👑</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="Lagu.mp3 (2).mp3" type="audio/mpeg">
+</audio>
+
+
+<button onclick="playMusic()">Play Music 🎵</button>
+
+<!-- PAGE 0 : SWEET OPENING -->
+<section class="page active" id="page0">
+    <h1 class="valentine-text" id="valentineTyping"></h1>
+    <p class="sub-text hidden" id="subText">Halaman ini khusus aku buat untuk kamu 👑</p>
+    <button id="enterBtn" class="hidden" onclick="nextPage(1)">Masuk Yuk ✨</button>
+</section>
+
+
+
+<!-- PAGE 1 : INTRO -->
+<section class="page" id="page1">
+    <h1 class="big-title">For Someone Special 👑</h1>
+    <button onclick="nextPage(2)">Start ✨</button>
+</section>
+
+<!-- PAGE 2 : ENVELOPE -->
+<section class="page" id="page2">
+    <div class="envelope" onclick="nextPage(3)">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+    </div>
+    <p>Klik amplopnya ya...</p>
+</section>
+
+<!-- PAGE 3 : GAME -->
+<section class="page" id="page3">
+    <h2>Tangkap 3 Hati 💛</h2>
+    <div id="gameArea"></div>
+    <p id="score">0 / 3</p>
+</section>
+
+<!-- PAGE 4 : PILIH HADIAH -->
+<section class="page" id="page4">
+    <h2 class="glow-text">Kamu mau hadiah apa dari aku? 😌</h2>
+
+    <div class="gift-container">
+        <button class="gift-btn" onclick="fakeChoice()">🍫 Coklat</button>
+        <button class="gift-btn" onclick="fakeChoice()">🌹 Bunga</button>
+        <button class="gift-btn" onclick="fakeChoice()">💎 Jam Tangan</button>
+        <button class="gift-btn" onclick="fakeChoice()">🍽 Dinner</button>
+    </div>
+</section>
+
+<!-- PAGE 5 : AKU HADIAHNYA -->
+<section class="page" id="page5">
+    <div class="gift-fullscreen">
+        <h1 class="big-surprise" id="surpriseText">AKU HADIAHNYA 😌👑</h1>
+        <img src="WhatsApp Image 2026-02-13 at 23.38.17.jpeg" class="surprise-img">
+        <button onclick="nextPage(6)">Lanjut 😏</button>
+    </div>
+</section>
+
+<!-- PAGE 6 : CONFESSION -->
+<section class="page" id="page6">
+    <div class="card">
+        <img src="WhatsApp Image 2026-02-13 at 21.49.01.jpeg">
+        <h1 id="typing"></h1>
+        <p>Kamu mau ga jadi partner valentine aku? 😌</p>
+
+        <button class="yes" onclick="nextPage(7)">Mau 👑</button>
+        <button class="no" id="noBtn">Enggak 😏</button>
+    </div>
+</section>
+
+<!-- PAGE 7 : FINAL -->
+<section class="page" id="page7">
+    <h1 class="glow-text">You’re My Favorite Person 💛</h1>
+    <p>Hari ini. Besok. Selamanya.</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

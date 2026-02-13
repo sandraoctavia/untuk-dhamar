@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    background: black;
+    color: gold;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.page.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.big-title {
+    font-size: 40px;
+    text-shadow: 0 0 20px gold;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background: gold;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.envelope {
+    width: 200px;
+    height: 120px;
+    background: gold;
+    position: relative;
+    cursor: pointer;
+}
+
+.flap {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 60px solid black;
+    top: -60px;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    border: 2px solid gold;
+    border-radius: 20px;
+    box-shadow: 0 0 30px gold;
+    text-align: center;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid gold;
+    object-fit: cover;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px gold, 0 0 30px goldenrod;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.no {
+    position: absolute;
+    background: crimson;
+    color: white;
+}
+
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: gold;
+    border-radius: 50%;
+    padding: 10px;
+}
+.gift-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gift-btn {
+    background: black;
+    border: 2px solid gold;
+    color: gold;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gift-btn:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
+.gift-fullscreen {
+    background: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease;
+}
+
+.big-surprise {
+    font-size: 60px;
+    text-align: center;
+    color: gold;
+    text-shadow: 0 0 20px gold,
+                 0 0 40px goldenrod,
+                 0 0 60px gold;
+    animation: zoomText 1s ease;
+}
+
+.surprise-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid gold;
+    object-fit: cover;
+    box-shadow: 0 0 40px gold;
+    animation: zoomImage 1.2s ease;
+}
+
+@keyframes zoomText {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomImage {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
